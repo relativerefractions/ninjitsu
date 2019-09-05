@@ -1,0 +1,11 @@
+#!/bin/bash
+# Restore prompts for passwords with su
+# Simplified by:
+# Ninjitsu
+# 
+sudo cp -v /etc/pam.d/su.bak /etc/pam.d/su
+echo 'Restored su cfg: Will prompt for passwords with su.'
+echo 'FTW!!!'
+# By: Ninjitsu!!!
+# Email: refract@pm.me
+##########################

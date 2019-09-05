@@ -1,0 +1,15 @@
+#!/bin/bash
+# su w/o password prompts
+# simplified by Ninjitsu
+# From: https://unix.stackexchange.com/questions/113754/allow-user1-to-su-user2-without-password
+sudo cp -v /etc/pam.d/su /etc/pam.d/su.bak;
+echo 'Backed up original configuration to /etc/pam.d/su.bak'
+# Replace ninjitsu with your username:
+sudo echo 'auth  [success=ignore default=1] pam_succeed_if.so user = ninjitsu' >> /etc/pam.d/su;
+# Replace ninjitsu with your username:
+sudo echo 'auth  sufficient                 pam_succeed_if.so use_uid user = ninjitsu' >> /etc/pam.d/su
+echo 'Added 2 lines to /etc/pam.d/su'
+echo 'You will no longer need to enter passwords when switching users with su.'
+# By: Ninjitsu!!!
+# Email: refract@pm.me
+##########################
