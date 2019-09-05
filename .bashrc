@@ -57,7 +57,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\Ninjitsu-Kali-WSL\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -430,7 +430,7 @@ alias B2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git pull https://github.com/relativerefractions/ninjitsu.git;
                git push -u origin master;'
 # Configure GitHub Login Credentials
-alias gitcfg='git config --global credential.helper wincred'
+alias gitcfg="git config --global credential.helper 'store --file /root/.my-credentials'"
 ###############################################################################################################
 
 ###############################################################################################################
