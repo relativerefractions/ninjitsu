@@ -212,8 +212,8 @@ alias e='sudo nano /home/ninjitsu/.bashrc'         #	< << Quick & Dirty Edit for
 #						   #	          (THIS) 				      #
 #						   # 		 '.bashrc'			 	      #
 #						   #		   File					      #
-alias eg='sudo gedit /home/ninjitsu/.bashrc'       #    < << GTK-Edit This File!!! >> >                       ##
-###########################################################################################################
+alias eg='sudo gedit /home/ninjitsu/.bashrc'       #    < << GTK-Edit This File!!! >> >                       #
+###############################################################################################################
 
 ###############################################################################################################
 # Custom Essentials: Aliases for most Linux(es)	   #     		(For Any Nix Box) 	              #
@@ -341,7 +341,7 @@ sudo chown -Rv ninjitsu:ninjitsu /home/ninjitsu/'
 ###############################################################################################################
 
 ###############################################################################################################
-# Aliases for WSL(1/2) Kali Linux		  #             • Smoothly run your machine		      #
+# Aliases for WSL(1/2) Kali Linux		 #             • Smoothly run your machine		      #
 ###############################################################################################################
 # Install with one letter!										      #
 alias I='sudo apt install -y '
@@ -374,9 +374,9 @@ alias aptunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /v
 alias ar='sudo apt autoremove -y'
 # Remove a broken package via the following command:                                                          #
 alias broken='sudo dpkg --remove --force-remove-reinstreq '
-##############################################################################################################
-# youtube-dl Tricks
-#############################################################################################################
+###############################################################################################################
+# youtube-dl Tricks											      #
+###############################################################################################################
 # Auto-Install youtube-dl and deps
 alias ytdl='sudo rm /usr/local/bin/youtube-dl;
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl;
@@ -384,9 +384,9 @@ sudo chmod a+rx /usr/local/bin/youtube-dl;
 sudo apt install -y aria2 ffmpeg'
 # Download a playlist with youtube-dl
 alias p='youtube-dl --yes-playlist -x --audio-format mp3 '
-############################################################################################################## # youtube-dl tricks
-# GitHub Tricks
-#############################################################################################################
+###############################################################################################################
+# GitHub Tricks												      #
+###############################################################################################################
 #
 # Add commit to GitHub... enter comment and finish with "
 alias gitcommit='git init;
@@ -417,7 +417,23 @@ alias b2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git pull https://github.com/relativerefractions/ninjitsu.git;
                git push -u origin master;
                git config --global credential.helper wincred'
-##############################################################################################################
+alias b2rr='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
+               git init;
+               git add .;
+               git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
+               git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+               git pull https://github.com/relativerefractions/ninjitsu.git;
+               git push -u origin master;
+               git config --global credential.helper wincred'
+alias B2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
+               git init;
+               git add .;
+               git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
+               git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+               git pull https://github.com/relativerefractions/ninjitsu.git;
+               git push -u origin master;
+               git config --global credential.helper wincred'
+###############################################################################################################
 
 ###############################################################################################################
 # Special Thanks: To all you Linux users, developers, & hackers,					      #
