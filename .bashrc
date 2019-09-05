@@ -371,6 +371,19 @@ sudo apt install -y aria2 ffmpeg'
 alias p='youtube-dl --yes-playlist -x --audio-format mp3 '
 # Apt autoremove										              #
 alias ar='sudo apt autoremove -y'
+# Remove a broken package via the following command:                    				      #
+alias broken='sudo dpkg --remove --force-remove-reinstreq '
+# Add commit to GitHub... enter comment and finish with "
+alias gitcommit='git init;
+	         git add .;
+                 git commit -m "'
+# Add Commit to Relative Refractions GitHub								      #
+alias RRgit='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+             git push -u origin master;'
+alias gitRR='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+             git push -u origin master;'
+# Copy latest .bashrc to .										      #
+alias cpbashrc='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc; ls -la'
 ###############################################################################################################
 
 ###############################################################################################################
