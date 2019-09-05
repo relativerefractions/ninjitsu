@@ -402,29 +402,29 @@ alias gitRR='git remote add origin https://github.com/relativerefractions/ninjit
 alias cpbashrc='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc; ls -la'
 # Copy latest .bashrc to GitHub all-in-one
 alias bash2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
-	       git init;
-	       git add .;
+               git init;
+               git add .;
                git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
-	       git remote add origin https://github.com/relativerefractions/ninjitsu.git;
-	       git pull https://github.com/relativerefractions/ninjitsu.git;
-	       git push -u origin master;
-               git config --global credential.helper wincred'
+               git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+               git config --global credential.helper wincred
+               git pull https://github.com/relativerefractions/ninjitsu.git;
+               git push -u origin master'
 alias b2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git init;
                git add .;
                git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
                git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+               git config --global credential.helper wincred
                git pull https://github.com/relativerefractions/ninjitsu.git;
-               git push -u origin master;
-               git config --global credential.helper wincred'
+               git push -u origin master'
 alias b2rr='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git init;
                git add .;
                git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
                git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+               git config --global credential.helper wincred
                git pull https://github.com/relativerefractions/ninjitsu.git;
-               git push -u origin master;
-               git config --global credential.helper wincred'
+               git push -u origin master'
 alias B2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git init;
                git add .;
