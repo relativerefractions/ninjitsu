@@ -381,9 +381,18 @@ alias gitcommit='git init;
 alias RRgit='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
              git push -u origin master;'
 alias gitRR='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+             git pull https://github.com/relativerefractions/ninjitsu.git;
              git push -u origin master;'
 # Copy latest .bashrc to .										      #
 alias cpbashrc='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc; ls -la'
+# Copy latest .bashrc to GitHub all-in-one
+alias bash2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
+	       git init;
+	       git add .;
+               git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
+	       git remote add origin https://github.com/relativerefractions/ninjitsu.git;
+	       git pull https://github.com/relativerefractions/ninjitsu.git;
+	       git push -u origin master;'
 ###############################################################################################################
 
 ###############################################################################################################
