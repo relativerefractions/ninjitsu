@@ -208,12 +208,11 @@ alias susu='sudo su'				   # switch to root					      #
 ###############################################################################################################
 # .bashrc: Special Addition(s)			   #	   For your bashrc pleasure  			      #
 ###############################################################################################################
-alias e='sudo nano /home/ninjitsu/.bashrc'         #	< << Quick & Dirty Edit for>> > 		      #
+alias e='sudo gedit /home/ninjitsu/.bashrc'        #	< << Quick & Dirty Edit for>> > 		      #
 #						   #	          (THIS) 				      #
 #						   # 		 '.bashrc'			 	      #
 #						   #		   File					      #
-alias eg='sudo gedit /home/ninjitsu/.bashrc'       #    < << GTK-Edit This File!!! >> >                       ##
-###########################################################################################################
+###############################################################################################################
 
 ###############################################################################################################
 # Custom Essentials: Aliases for most Linux(es)	   #     		(For Any Nix Box) 	              #
@@ -341,7 +340,7 @@ sudo chown -Rv ninjitsu:ninjitsu /home/ninjitsu/'
 ###############################################################################################################
 
 ###############################################################################################################
-# Aliases for WSL(1/2) Kali Linux		  #             • Smoothly run your machine		      #
+# WSL Kali Aliases				# Special Aliases for WSL's Kali			      #
 ###############################################################################################################
 # Install with one letter!										      #
 alias I='sudo apt install -y '
@@ -357,37 +356,23 @@ alias da='sudo dpkg --configure -a'
 alias fixdpkg='sudo dpkg --configure -a'
 # Quickly configure all packages to fix dpkg other alternative (easy to forget aliases and get confused!)     #
 alias dpkgfix='sudo dpkg --configure -a'
-# Clean apt
-alias ccapt='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
-alias cc='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
-# Fix Apt
-alias fa='sudo apt -fy install'
-alias fixapt='sudo apt -f install'
-alias aptfix='sudo apt -f install'
-# Unlock Apt/dpkg
-alias ul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias unlockapt='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias dpkgul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias dpkgunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias aptunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-# Apt autoremove                                                                                              #
-alias ar='sudo apt autoremove -y'
-# Remove a broken package via the following command:                                                          #
-alias broken='sudo dpkg --remove --force-remove-reinstreq '
-##############################################################################################################
-# youtube-dl Tricks
-#############################################################################################################
-# Auto-Install youtube-dl and deps
+# Quickly remove lock file blocking dpkg/apt                                                                  #
+alias ul='sudo rm /var/ '
+# Quickly fix all packages with apt	                                                                      #
+alias fa='sudo apt -f install -y'
+# Quickly fix all packages with apt                                                                           #
+alias fixapt='ul; da; sudo apt -f install -y'
+# Install youtube-dl automagickally									      #
 alias ytdl='sudo rm /usr/local/bin/youtube-dl;
 sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl;
 sudo chmod a+rx /usr/local/bin/youtube-dl;
 sudo apt install -y aria2 ffmpeg'
-# Download a playlist with youtube-dl
+# Download playlist with youtube-dl
 alias p='youtube-dl --yes-playlist -x --audio-format mp3 '
-############################################################################################################## # youtube-dl tricks
-# GitHub Tricks
-#############################################################################################################
-#
+# Apt autoremove										              #
+alias ar='sudo apt autoremove -y'
+# Remove a broken package via the following command:                    				      #
+alias broken='sudo dpkg --remove --force-remove-reinstreq '
 # Add commit to GitHub... enter comment and finish with "
 alias gitcommit='git init;
 	         git add .;
@@ -407,17 +392,8 @@ alias bash2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
                git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
 	       git remote add origin https://github.com/relativerefractions/ninjitsu.git;
 	       git pull https://github.com/relativerefractions/ninjitsu.git;
-	       git push -u origin master;
-               git config --global credential.helper wincred'
-alias b2RR='sudo cp -v /home/ninjitsu/.bashrc ./.bashrc;
-               git init;
-               git add .;
-               git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
-               git remote add origin https://github.com/relativerefractions/ninjitsu.git;
-               git pull https://github.com/relativerefractions/ninjitsu.git;
-               git push -u origin master;
-               git config --global credential.helper wincred'
-##############################################################################################################
+	       git push -u origin master;'
+###############################################################################################################
 
 ###############################################################################################################
 # Special Thanks: To all you Linux users, developers, & hackers,					      #
