@@ -180,12 +180,71 @@ alias more=less                                   # 'more' == 'less' pager      
 ###############################################################################################################
 # Arch Linux: Alias' Ad-Ons     									      #
 ###############################################################################################################
-alias P='sudo pacman -Syyu'                       # Update/Upgrade Pacman & Sync	                      #
-alias I='sudo pacman -S '                         # Install a package with Pacman                	      #
-alias S='sudo pacman -Ss '			  # Search for packages
-alias MK='makepkg --noconfirm -si '		  # Build packages from source without a bother  	      #
+# Update/Upgrade Pacman & Sync
+alias P='sudo pacman -Syyu'
+# Install a package with Pacman
+alias I='sudo pacman -S '
+# Search for packages
+alias S='sudo pacman -Ss '
+# Build packages from source
+alias MK='makepkg --noconfirm -si '
+# Build packages from source without a bother
+alias mk='makepkg --noconfirm -Ssci '
+# Update/Upgrade Pacman & Sync
+alias uu='sudo pacman -Syyu --force'
+# Remove the lock from pacman
+alias UL='sudo rm /var/lib/pacman/db.lck'
+# Remove packages without the fuss of typing
+alias R='sudo pacman -R '
+# Search the sync database for packages
+alias S='sudo pacman -Ss '
+# Install from a local file (packagename.tar.gz)
+alias IL='sudo pacman -U '
+# List all installed packages
+alias L='pacman -Qqe '
+# Search for package file names in remote packages
+alias RQ='sudo pacman -Fs '
+# Display extensive information about a given package
+alias PI='sudo pacman -Si package_name '
+# Display information about locally installed packages
+alias LP='sudo pacman -Qi '
+# Display the list of backup files and their modification states
+alias LB='sudo pacman -Qii package_name '
+# Retrieve a list of the files installed by a remote package
+alias LR='sudo pacman -Fl '
+# Verify the presence of the files installed by a package
+alias VF='sudo pacman -Qk '
+# Verify the presence of the files installed by a package more thoroughly
+alias VFV='sudo pacman -Qkk '
+# Query the database to know which package a file in the file system belongs to
+alias QB='sudo pacman -Qo '
+# Query the database to know which remote package a file belongs to
+alias QR='sudo pacman -Fo '
+# List all packages no longer required as dependencies (orphans)
+alias LO='sudo pacman -Qdt '
+# List all packages explicitly installed and not required as dependencies
+alias LE='sudo pacman -Qet '
+# To view the dependency tree of a package
+alias T='sudo pactree '
+# chown recursively as ninjitsu:ninjitsu
+alias ninjpwn='sudo chown -R ninjitsu:ninjitsu '
+# chown recursinvely as root:root
+alias supwn='sudo chown -R root:root '
+# chmod to executable
+alias chx='sudo chmod +x '
+# chmod to set suid bit
+alias chus='sudo chmod u+s '
+# cd to Ninjitsu's Downloads
+alias ninjdl='cd /home/ninjitsu/Downloads'
+# cd to Root's Downloads
+alias sudl='sudo cd /root/Downloads'
+# cd to /home/ninjitsu/GitHub/ninjitsu
+alias _='cd /home/ninjitsu/GitHub/ninjitsu'
+# cd to /mnt/c/Users/Ninjitsu/Music
+alias +='cd /mnt/c/Users/Ninjitsu/Music'
 # Simplified Pacman Frontend GTK Installer	  # Run as Ninjitsu
-alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman, octopi, or pamac-aur for GTK... yay to stay shellbound."'
+alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK... yay or or pamac to stay shellbound."'
+alias Q='sudo pacman -Qi '			  # See if a package is installed in the system	      #
 ###############################################################################################################
 
 ###############################################################################################################
@@ -296,15 +355,14 @@ alias c='rsync --info=progress2 -avz '          # copy src to dir w/progress bar
 alias r='rm -rvf '                              # remove dir or file(s) recursive/verbose(ly)   	      #
 alias mdir='mkdir -vp '                         # mkdir w/parents verbosely                     	      #
 alias t='touch '                                # touch a file without typing touch             	      #
-alias c='rsync --info=progress2 -avz '          # copy src to dir w/progress bar verbosely     		      #
-alias sc='sudo rsync --info=progress2 -avz '    # copy src to dir w/progress bar verbosely     	 	      #
+alias sc='sudo rsync --info=progress2 -avz '    # copy src to dir w/progress bar verbosely     	      #
 alias mpar='mkdir -vp '                         # mkdir w/parents verbosely                     	      #
 alias t='touch '                                # touch a file without typing touch             	      #
 alias cdsu='cd /etc/sudoers.d/;
-sudo ls -l'			                # enter the sudoers.d directory				      #
+sudo ls -l'			                # enter the sudoers.d directory			      #
 alias restart='sudo reboot'                     # reboot or restart, doesn't matter			      #
 # 						# search aliases with grep				      #
-alias searchalias='grep -rnIi --color '		#
+alias searchalias='grep -rnIi --color '	#							      #
 alias sucaja='gksudo caja'			# run caja file explorer as root			      #
 alias cajasu='gksudo caja'			# run caja file explorer as root			      #
 ###############################################################################################################
