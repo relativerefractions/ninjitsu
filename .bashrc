@@ -374,6 +374,8 @@ alias aptunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /v
 alias ar='sudo apt autoremove -y'
 # Remove a broken package via the following command:                                                          #
 alias broken='sudo dpkg --remove --force-remove-reinstreq '
+# Cheat and see your aliases
+alias cheat='less /home/ninjitsu/.bashrc'
 ###############################################################################################################
 # youtube-dl Tricks											      #
 ###############################################################################################################
@@ -383,7 +385,7 @@ sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/you
 sudo chmod a+rx /usr/local/bin/youtube-dl;
 sudo apt install -y aria2 ffmpeg'
 # Download a playlist with youtube-dl
-alias p='youtube-dl --yes-playlist -x --audio-format mp3 '
+alias p='cd "/mnt/c/Users/Ninjitsu/Music"; youtube-dl --yes-playlist -x --audio-format mp3 '
 ###############################################################################################################
 # GitHub Tricks												      #
 ###############################################################################################################
