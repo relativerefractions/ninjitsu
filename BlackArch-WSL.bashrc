@@ -243,7 +243,7 @@ alias _='cd /home/ninjitsu/GitHub/ninjitsu'
 # cd to /mnt/c/Users/Ninjitsu/Music
 alias +='cd /mnt/c/Users/Ninjitsu/Music'
 # Simplified Pacman Frontend GTK Installer	  # Run as Ninjitsu
-alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK... yay or or pamac to stay shellbound."'
+alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; sudo strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 ; yay -S tkpacman octopi pamac-aur; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK... yay or or pamac to stay shellbound."'
 alias Q='sudo pacman -Qi '			  # See if a package is installed in the system	      #
 ###############################################################################################################
 
