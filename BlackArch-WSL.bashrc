@@ -185,7 +185,7 @@ alias I='sudo pacman -S '                         # Install a package with Pacma
 alias S='sudo pacman -Ss '			  # Search for packages
 alias MK='makepkg --noconfirm -si '		  # Build packages from source without a bother  	      #
 # Simplified Pacman Frontend GTK Installer	  # Run as Ninjitsu
-alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman, octopi, or pamac-aur for GTK... or yay to stay in a shell."'
+alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman, octopi, or pamac-aur for GTK... yay to stay shellbound."'
 ###############################################################################################################
 
 ###############################################################################################################
@@ -376,8 +376,6 @@ sudo chown -Rv ninjitsu:ninjitsu /home/ninjitsu/'
 #alias ar='sudo apt autoremove -y'
 # Remove a broken package via the following command:                                                          #
 #alias broken='sudo dpkg --remove --force-remove-reinstreq '
-# Cheat and see your aliases
-#alias cheat='less /home/ninjitsu/.bashrc'
 ###############################################################################################################
 # youtube-dl Tricks											      #
 ###############################################################################################################
@@ -403,7 +401,8 @@ alias gitRR='git remote add origin https://github.com/relativerefractions/ninjit
 # Copy latest .bashrc to .										      #
 alias cpbashrc='sudo cp /home/ninjitsu/.bashrc /home/ninjitsu/GitHub/ninjitsu/BlackArch-WSL.bashrc;'
 # Copy latest .bashrc to GitHub all-in-one
-alias b2rr='sudo cp /home/ninjitsu/.bashrc ./BlackArch-WSL.bashrc;
+alias b2rr='sudo cp /home/ninjitsu/.bashrc /home/ninjitsu/GitHub/ninjitsu/BlackArch-WSL.bashrc;
+	    cd /home/ninjitsu/GitHub/ninjitsu;
             git init;
             git add .;
             git commit -m "Latest Auto-Commit < [ BlackArch Linux - WSL2 ] > .bashrc"
@@ -415,7 +414,8 @@ alias rr2b='sudo cp ./BlackArch-WSL.bashrc /home/ninjitsu/.bashrc'
 # Configure GitHub Login Credentials
 alias gitcfg="git config --global credential.helper 'store --file ~/.my-credentials'"
 ###############################################################################################################
-
+#Cheat and see your aliases
+alias cheat='less /home/ninjitsu/.bashrc'
 ###############################################################################################################
 # Special Thanks: To all you Linux users, developers, & hackers,					      #
 # without which, Linux, in all its complexity and awe would not be possible,				      #
