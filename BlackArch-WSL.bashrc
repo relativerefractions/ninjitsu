@@ -185,7 +185,7 @@ alias I='sudo pacman -S '                         # Install a package with Pacma
 alias S='sudo pacman -Ss '			  # Search for packages
 alias MK='makepkg --noconfirm -si '		  # Build packages from source without a bother  	      #
 # Simplified Pacman Frontend GTK Installer	  # Run as Ninjitsu
-alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK or yay."'
+alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; yay -S tkpacman octopi pamac-aur --noconfirm; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman, octopi, or pamac-aur for GTK... or yay to stay in a shell."'
 ###############################################################################################################
 
 ###############################################################################################################
@@ -346,38 +346,38 @@ sudo chown -Rv ninjitsu:ninjitsu /home/ninjitsu/'
 # Aliases for WSL(1/2) Kali Linux		 #             • Smoothly run your machine		      #
 ###############################################################################################################
 # Install with one letter!										      #
-alias I='sudo apt install -y '
+#alias I='sudo apt install -y '
 # One letter search...											      #
-alias S='apt-cache search '
+#alias S='apt-cache search '
 # Quick synaptic install launcher									      #
-alias syn='sudo synaptic'
+#alias syn='sudo synaptic'
 # Quick synaptic gksudo launcher                                                                              #
-alias gsyn='gksudo synaptic'
+#alias gsyn='gksudo synaptic'
 # Quickly configure all packages to fix dpkg                                                                  #
-alias da='sudo dpkg --configure -a'
+#alias da='sudo dpkg --configure -a'
 # Quickly configure all packages to fix dpkg alternate                                                        #
-alias fixdpkg='sudo dpkg --configure -a'
+#alias fixdpkg='sudo dpkg --configure -a'
 # Quickly configure all packages to fix dpkg other alternative (easy to forget aliases and get confused!)     #
-alias dpkgfix='sudo dpkg --configure -a'
+#alias dpkgfix='sudo dpkg --configure -a'
 # Clean apt
-alias ccapt='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
-alias cc='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
+#alias ccapt='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
+#alias cc='sudo apt autoremove -y; sudo apt clean; sudo dpkg --configure -a; sudo apt -fy install'
 # Fix Apt
-alias fa='sudo apt -fy install'
-alias fixapt='sudo apt -f install'
-alias aptfix='sudo apt -f install'
+#alias fa='sudo apt -fy install'
+#alias fixapt='sudo apt -f install'
+#alias aptfix='sudo apt -f install'
 # Unlock Apt/dpkg
-alias ul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias unlockapt='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias dpkgul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias dpkgunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
-alias aptunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
+#alias ul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
+#alias unlockapt='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
+#alias dpkgul='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
+#alias dpkgunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
+#alias aptunlock='sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock'
 # Apt autoremove                                                                                              #
-alias ar='sudo apt autoremove -y'
+#alias ar='sudo apt autoremove -y'
 # Remove a broken package via the following command:                                                          #
-alias broken='sudo dpkg --remove --force-remove-reinstreq '
+#alias broken='sudo dpkg --remove --force-remove-reinstreq '
 # Cheat and see your aliases
-alias cheat='less /home/ninjitsu/.bashrc'
+#alias cheat='less /home/ninjitsu/.bashrc'
 ###############################################################################################################
 # youtube-dl Tricks											      #
 ###############################################################################################################
@@ -395,26 +395,25 @@ alias p='cd "/mnt/c/Users/Ninjitsu/Music"; youtube-dl --yes-playlist -x --audio-
 # Add commit to GitHub... enter comment and finish with "
 alias gitcommit='git init;
 	         git add .;
-                 git commit -m "'
+                 git commit -m "Latest Auto-Commit < [ BlackArch Linux - WSL2 ] > .bashrc"'
 # Add Commit to Relative Refractions GitHub								      #
-alias RRgit='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
-             git push -u origin master;'
 alias gitRR='git remote add origin https://github.com/relativerefractions/ninjitsu.git;
              git pull https://github.com/relativerefractions/ninjitsu.git;
              git push -u origin master;'
 # Copy latest .bashrc to .										      #
-alias cpbashrc='sudo cp -v /home/ninjitsu/.bashrc ./BlackArch-WSL.bashrc; ls -la'
+alias cpbashrc='sudo cp /home/ninjitsu/.bashrc /home/ninjitsu/GitHub/ninjitsu/BlackArch-WSL.bashrc;'
 # Copy latest .bashrc to GitHub all-in-one
-alias b2rr='sudo cp -v /home/ninjitsu/.bashrc ./BlackArch-WSL.bashrc;
+alias b2rr='sudo cp /home/ninjitsu/.bashrc ./BlackArch-WSL.bashrc;
             git init;
             git add .;
-            git commit -m "Latest Auto-Commit < [ WSL Kali Linux ] > .bashrc"
+            git commit -m "Latest Auto-Commit < [ BlackArch Linux - WSL2 ] > .bashrc"
             git remote add origin https://github.com/relativerefractions/ninjitsu.git;
             git pull https://github.com/relativerefractions/ninjitsu.git;
-            git push -u origin master;
-	    sudo cp ./BlackArch-WSL.bashrc /home/ninjitsu/.bashrc'
+            git push -u origin master;'
+# Copy BlackArch-WSL.bashrc to .bashrc
+alias rr2b='sudo cp ./BlackArch-WSL.bashrc /home/ninjitsu/.bashrc'
 # Configure GitHub Login Credentials
-alias gitcfg="git config --global credential.helper 'store --file /root/.my-credentials'"
+alias gitcfg="git config --global credential.helper 'store --file ~/.my-credentials'"
 ###############################################################################################################
 
 ###############################################################################################################
