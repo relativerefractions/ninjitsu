@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "SMP007-1" >> /etc/hosts
+echo "SMP007-2" >> /etc/hosts
+echo "SMP007-3" >> /etc/hosts
+#set a password across all nodes
+printf "User ID: "
+read MYUSERID
+printf "New Password: "
+read MYPASS
+
+while read -r i; do
+    echo changing password on "$i"
+    ssh root@"$i" sudo echo "$MYUSERID":"$MYPASS" | chpasswd
+    echo password changed on "$i"
+done< /usr/bin/setpwd.srvrs
