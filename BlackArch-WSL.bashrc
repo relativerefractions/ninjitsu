@@ -243,7 +243,7 @@ alias _='cd /home/ninjitsu/GitHub/ninjitsu'
 # cd to /mnt/c/Users/Ninjitsu/Music
 alias +='cd /mnt/c/Users/Ninjitsu/Music'
 # Simplified Pacman Frontend GTK Installer	  # Run as Ninjitsu
-alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; sudo strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 ; yay -S tkpacman octopi pamac-aur; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK... yay or or pamac to stay shellbound."'
+alias installapps='mkdir -p /home/ninjitsu/GitHub; cd /home/ninjitsu/GitHub; git clone https://github.com/relativerefractions/ninjitsu.git; cd ./ninjitsu; sudo pacman -S git --needed --noconfirm; git clone https://aur.archlinux.org/yay.git; cd yay; makepkg -si; cd ..; rm -rf yay; sudo strip --remove-section=.note.ABI-tag /usr/lib64/libQt5Core.so.5 ; yay -S tkpacman octopi pamac-aur trizen; sudo passwd root; echo "Mission Complete!"; echo "Run tkpacman or octopi for GTK... yay, trizen, or pamac to stay shellbound."'
 alias Q='sudo pacman -Qi '			  # See if a package is installed in the system	      #
 ###############################################################################################################
 
@@ -371,8 +371,8 @@ alias cajasu='gksudo caja'			# run caja file explorer as root			      #
 ###############################################################################################################
 # Software Aliases:				 # Adding Cushion to your Fingers			      #
 ###############################################################################################################
-# Downloads & extracts audio from YouTube and converts it into mp3 format.				      #
-alias y='youtube-dl -x --audio-format=mp3 '      # download audio mp3 from youtube link         	      #
+# Changes directory to C:\Users\Ninjitsu\Music & downloads + extracts audio from YouTube + converts it into mp3 format.				      								      #
+alias y='cd "/mnt/c/Users/Ninjitsu/Music" ;youtube-dl -x --audio-format=mp3 '      
 # Test out the aria2c downloader with youtube-dl:							      #
 alias ytest='youtube-dl -x --audio-format=mp3 --external-downloader aria2c '				      #
 alias gc='sudo grub-customizer'			 # Launch Grub-Customizer				      #
