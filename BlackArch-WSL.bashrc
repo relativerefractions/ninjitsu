@@ -167,18 +167,18 @@ fi
 ###############################################################################################################
 
 ###############################################################################################################
-# Arch Linux: Default Aliases                      # Targeted for Arch Linux Based OS'es           	      #
+# <-=[- BlackArch Linux - WSL2 -]=->		  # Default Aliases                      		      #
 ###############################################################################################################
 alias cp="cp -i"                                  # confirm before overwriting something          	      #
 alias df='df -h'                                  # human-readable sizes                          	      #
-alias free='free -g'				   # free size in GB					      #
+alias free='free -g'				  # free size in GB					      #
 alias free='free -m'                              # show sizes in MB                              	      #
 alias np='nano -w PKGBUILD'                       # nano with PKGBUILD                            	      #
 alias more=less                                   # 'more' == 'less' pager                        	      #
 ###############################################################################################################
 
 ###############################################################################################################
-# Arch Linux: Alias' Ad-Ons     									      #
+# <-=[- BlackArch Linux - WSL2 -]=->              # Alias' Ad-Ons					      #
 ###############################################################################################################
 # Update/Upgrade Pacman & Sync
 alias P='sudo pacman -Syyu'
@@ -262,7 +262,7 @@ alias atta='tmux attach -t multiplexa'		   # Attach to Multiplex 1 session			   
 alias attb='tmux attach -t multiplexb'		   # Attach to Multiplex 1 session			      #
 alias attc='tmux attach -t multiplexc'		   # Attach to Multiplex 1 session			      #
 alias lstmux='tmux ls'				   # List existing tmux sessions			      #
-alias sun='su ninjitsu'				   # switch to ninjitsu					      #
+alias sun='su ninjitsu'			   # switch to ninjitsu				      #
 alias susu='sudo su'				   # switch to root					      #
 ###############################################################################################################
 
@@ -272,7 +272,8 @@ alias susu='sudo su'				   # switch to root					      #
 alias e='sudo nano /home/ninjitsu/.bashrc'         #	< << Quick & Dirty Edit for>> > 		      #
 #						   #	          (THIS) 				      #
 #						   # 		 '.bashrc'			 	      #
-#						   #		   File					      #
+#						   #     	   File				      #
+#						   #							      #
 alias eg='sudo gedit /home/ninjitsu/.bashrc'       #    < << GTK-Edit This File!!! >> >                       #
 ###############################################################################################################
 
