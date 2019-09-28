@@ -113,18 +113,20 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################################################################
-# <-=[- BlackArch Linux - WSL2 -]=->		          # Default Aliases                                   #
+#[+]WSL(v2): <  < << - BlackArch Linux __- >> >   >WSL(v2):[-]       o . O . o . o . o . o   	              #
 ###############################################################################################################
-alias cp="cp -i"                                  # confirm before overwriting something               	      #
-alias df='df -h'                                  # human-readable sizes                              	      #
-alias free='free -g'				                      # free size in GB			      #
-alias free='free -m'                              # show sizes in MB                              	      #
-alias np='nano -w PKGBUILD'                       # nano with PKGBUILD                            	      #
-alias more=less                                   # 'more' == 'less' pager                        	      #
+alias cp="cp -i"                                  # confirm before overwriting something                      #
+alias df='df -h'                                  # human-readable sizes                                      #
+alias free='free -g'                                                  # free size in GB                       #
+alias free='free -m'                              # show sizes in MB                                          #
+alias np='nano -w PKGBUILD'                       # nano with PKGBUILD                                        #
+alias more=less                                   # 'more' == 'less' pager                                    #
 ###############################################################################################################
-
+                                                                                                                                                                                                                                   
+																												   
+																												   
 ###############################################################################################################
-# <-=[- BlackArch Linux - WSL2 -]=->              # Crucial Add-on Aliases				      #
+# >_< < _ > . o . < . < . ]|[ WSL (v2) BlackArch Linux ]|[ - = -  >>>  -   >>  >  >>    >       >>     > >>>  #                                                                                                                    
 ###############################################################################################################
 # Install a package with Pacman
 alias I='sudo pacman -S '
