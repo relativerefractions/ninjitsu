@@ -317,7 +317,7 @@ alias cajasu='gksudo caja'			# run caja file explorer as root			            #
 #####################################################################################################################
 
 #####################################################################################################################
-# Software Aliases:				 #               Adding Cushion to your Fingers                     #
+# Software Aliases:				#               Adding Cushion to your Fingers                      #
 #####################################################################################################################
 # Changes directory to C:\Users\Ninjitsu\Music & downloads + extracts audio from YouTube + converts it into         #
 # mp3 format.				      								            #
