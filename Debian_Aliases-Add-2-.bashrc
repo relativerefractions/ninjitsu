@@ -1,6 +1,6 @@
 
 ###############################################################################################################
-# Debian-Based Linux: Default Aliases               # Targeted at Debian-Based Linux OS'es           	      #
+# Debian-Based Linux: Default Aliases              # Targeted at Debian-Based Linux OS'es           	      #
 ###############################################################################################################
 alias ll='ls -lh'				   # long-listing of files with human-readable sizes	      #
 alias la='ls -lha'				   # long-listing of files with human-readable sizes incl     #
@@ -49,7 +49,8 @@ alias debfix='sudo rm -fv /var/lib/dpkg/lock*;
 alias btrefresh='sudo systemctl stop bluetooth;
                  sudo systemctl start bluetooth;
                  sudo systemctl status bluetooth;
-                 sudo btman;' 			   							      # ###############################################################################################################
+                 sudo btman;' 			   							      #
+###############################################################################################################
 
 ###############################################################################################################
 # Arch Linux: Default Aliases                      # Targeted for Arch Linux Based OS'es           	      #
@@ -192,157 +193,117 @@ alias cajasu='gksudo caja'			# run caja file explorer as root			      #
 ###############################################################################################################
 
 ###############################################################################################################
-# Software Aliases:				 # Adding Cushion to your Fingers			      #
+# Software Aliases:				# Adding Cushion to your Fingers			      #
 ###############################################################################################################
 # Downloads & extracts audio from YouTube and converts it into mp3 format.				      #
-alias y='youtube-dl -x --audio-format=mp3 '      # download audio mp3 from youtube link         	      #
+alias y='youtube-dl -x --audio-format=mp3 '     # download audio mp3 from youtube link         	      	      #
 # Test out the aria2c downloader with youtube-dl:							      #
 alias ytest='youtube-dl -x --audio-format=mp3 --external-downloader aria2c '				      #
-alias gc='sudo grub-customizer'			 # Launch Grub-Customizer				      #
-# download one track/playlist from  soundcloud 	 # download from SoundCloud				      #
+alias gc='sudo grub-customizer'			# Launch Grub-Customizer				      #
+# download one track/playlist from  soundcloud 	# download from SoundCloud				      #
 alias dlmysc='scdl -a  --path /home/ninjitsu/Music --onlymp3 -l https://soundcloud.com/user2412129'  				
-# download a playlist from SoundCloud 	 	 # download a user's songs from SoundCloud		      #
+# download a playlist from SoundCloud 	 	# download a user's songs from SoundCloud		      #
 alias dlusrsc='scdl -a  --path /home/ninjitsu/Music --onlymp3 -l '  				
-# download a playlist from a SoundCloud user 	 # download a playlist from a SoundCloud user	 	      #
+# download a playlist from a SoundCloud user 	# download a playlist from a SoundCloud user	 	      #
 alias dlscpl='scdl -p --path /home/ninjitsu/Music --onlymp3 -l '
-# download a user stream from SoundCloud 	 # download a user stream SoundCloud			      #
+# download a user stream from SoundCloud 	# download a user stream SoundCloud			      #
 alias dlscuserstream='scdl -s --onlymp3  --path /home/ninjitsu/Music -l '
-# download a playlist from SoundCloud 	 	 # download user tracks SoundCloud			      #
+# download a playlist from SoundCloud 	 	# download user tracks SoundCloud			      #
 alias dlscusertracks='scdl -t --onlymp3 --path /home/ninjitsu/Music -l '
-# download a user favs from SoundCloud 	 	 # download user favs from SoundCloud			      #
+# download a user favs from SoundCloud 	 	# download user favs from SoundCloud			      #
 alias dlscuserfavs='scdl -f --onlymp3 --path /home/ninjitsu/Music -l '
-# download a playlist from SoundCloud 	 	 # download from user comments on SoundCloud		      #
+# download a playlist from SoundCloud 	 	# download from user comments on SoundCloud		      #
 alias dlscusercomments='scdl -C --onlymp3 --path /home/ninjitsu/Music -l '
 alias cpmusic2wine='sudo cp -rav /home/ninjitsu/Music /home/ninjitsu/.wine/drive_c/users/ninjitsu/My\ Music'  #
-						 # copy music dir to WINE music dir		              #
-						 # copy the wine outside dir to the inside dir		      #
-#						 # Just specify block device then mount point.	  	      #
-alias ntfs3g='sudo ntfs-3g -o rw '		 # Types half of the command for you for ntfs-3g mounts       #
-# copy the wine collector dir to wine            # save time in WINE					      #
+						# copy music dir to WINE music dir		              #
+						# copy the wine outside dir to the inside dir		      #
+#						# Just specify block device then mount point.	  	      #
+alias ntfs3g='sudo ntfs-3g -o rw '		# Types half of the command for you for ntfs-3g mounts        #
+# copy the wine collector dir to wine           # save time in WINE					      #
 alias copytowine='sudo cp -vra /home/ninjitsu/WINE-Cask/ \
 /home/ninjitsu/.wine/drive_tec/users/ninjitsu/Downloads/;
 sudo chown -Rv ninjitsu:ninjitsu /home/ninjitsu/' 
 ###############################################################################################################
 
-###############################################################################################################
-# Special Thanks: To all you Linux users, developers, & hackers,					      #
-# without which, Linux, in all its complexity and awe would not be possible,				      #
-# be free, inspire others, or even exist at all.					        	      #
-###############################################################################################################
-#   By: Ninjitsu          |_______|_____________________________|_______________________________|	      #
-#    - a.k.a.- 		  |			|				|			      #
-# Joel MatthewGrant       |===================================================================================#
-# Email: refract@pm.me	  |	  |				|				|	      #
-###############################################################################################################
 
 ###############################################################################################################
-#-------------------------------------------------------------------------------------------------------------#
-# Pro-Tip: (kinda risky, but handy): I suggest you delete your root's .bashrc and hard-link your	      #
-# administrative account's .bashrc where the root's used to be. This way you only have to update one	      #
-# .bashrc file and thanks to these aliases, it's super easy. Stay fresh!    = )    = )    = )    = )          #
-# Example Command: sudo rm -vf /root/.bashrc; sudo ln -v /home/ninjitsu/.bashrc /root/.bashrc		      #
-#-------------------------------------------------------------------------------------------------------------#
-###############################################################################################################
-
-###############################################################################################################
-#-------------------------------------------------------------------------------------------------------------#
-# 01001010 01101111 01100101 01101100 00100000 01001101 01100001 01110100 01110100 01101000 01100101	      #
-# 			01110111 00100000 01000111 01110010 01100001 01101110 01110100			      #
-#-------------------------------------------------------------------------------------------------------------#
-###############################################################################################################
-# Debian-Based Linux: Default Aliases            # Targeted at Debian-Based Linux OS'es           	      #
-###############################################################################################################
-alias ll='ls -lh'				   # long-listing of files with human-readable sizes	      #
-alias la='ls -lha'				   # long-listing of files with human-readable sizes incl     #
-#						   # hidden files/folders 				      #
-alias l='ls -CF'				   # long-listing of files/folders with entries by columns    #
-#						   # also classifies them by indicator			      #
-alias em='emacs -nw'				   # Launches Emacs text editor without a GUI frame	      #
-alias dd='dd status=progress'			   # dd shows a status bar so you can keep track of a .img    #
-alias _='sudo'					   # '_' runs the sudo command as a shortcut		      #
-alias _i='sudo -i'				   # '_i'  runs the sudo command as a shortcut as a login     #
-#						   # shell						      #
-# Note: I'd like to get a cheat grep function working to search for the name of the different aliases 	      #
-###############################################################################################################
-
-###############################################################################################################
-# Debian-Based: Alias' 				   #			Ad-Ons				      #
+# Debian-Based: Alias' 				 #			Ad-Ons				      #
 ###############################################################################################################
 alias uu='sudo apt update;										
 sudo apt dist-upgrade --allow-downgrades -y;
 sudo apt autoremove -y;
-sudo apt clean -y'     				   # Update/Upgrade/Autoclean/Clean the System with Apt	      #
-alias install='sudo apt install -y '		   # Install without the fuss of typing.		      #
-alias search='apt-cache search '		   # Easily search Apt for packages			      #
-alias lsn='sudo synaptic'			   # Launch synaptic quickly				      #
-alias ninpwn='sudo chown -Rv ninjitsu:ninjitsu '   # chown recursinvely as ninjitsu:ninjitsu 		      #
-alias supwn='sudo chown -Rv root:root '	  	   # chown recursinvely as root:root	 		      #    
+sudo apt clean -y'     				 # Update/Upgrade/Autoclean/Clean the System with Apt	      #
+alias install='sudo apt install -y '		 # Install without the fuss of typing.		      	      #
+alias search='apt-cache search '		 # Easily search Apt for packages			      #
+alias lsn='sudo synaptic'			 # Launch synaptic quickly				      #
+alias ninpwn='sudo chown -Rv ninjitsu:ninjitsu ' # chown recursinvely as ninjitsu:ninjitsu 		      #
+alias supwn='sudo chown -Rv root:root '	  	 # chown recursinvely as root:root	 		      #    
 alias btrefresh='sudo systemctl stop bluetooth;
                  sudo systemctl start bluetooth;
                  sudo systemctl status bluetooth;
-                 sudo btman;' 			   # Repair Bluetooth					      #
+		 sudo btman;' 			 # Repair Bluetooth					      #
 alias reupbt='sudo apt install bluetooth
-bluez blueman -y;'				   # Reinstall BT Components				      #
+bluez blueman -y;'				 # Reinstall BT Components				      #
 alias btrefresh='sudo systemctl stop bluetooth;
                  sudo systemctl start bluetooth;
                  sudo systemctl status bluetooth;
-                 sudo btman;' 			   # Repair Bluetooth					      #
+                 sudo btman;' 			 # Repair Bluetooth					      #
 alias btreinstall='sudo apt install bluetooth
-bluez blueman -y;'				   # Reinstall BT Components				      #
-alias apthist='grep "install " /var/log/dpkg.log'  # Read the Package Log for Apt			      #
-alias fixapt='sudo apt -yf install'	           # fix apt quick n easy				      #
-alias fixdpkg='sudo dpkg --configure -a'	   # repair dpkg					      #
+bluez blueman -y;'				 # Reinstall BT Components				      #
+alias apthist='grep "install " /var/log/dpkg.log'# Read the Package Log for Apt			      	      #
+alias fixapt='sudo apt -yf install'	         # fix apt quick n easy				              #
+alias fixdpkg='sudo dpkg --configure -a'	 # repair dpkg					              #
 ###############################################################################################################
 
 ###############################################################################################################
-# Arch Linux: Default Aliases                      # Targeted for Arch Linux Based OS'es           	      #
+# Arch Linux: Default Aliases                    # Targeted for Arch Linux Based OS'es           	      #
 ###############################################################################################################                                                                                         
-#alias i='sudo pacman -S '                         # Install a package with Pacman                	      #
-#alias cp="cp -i"                                  # confirm before overwriting something          	      #
-#alias df='df -h'                                  # human-readable sizes                          	      #
-#alias free='free -g'				   # free size in GB					      #
-#alias free='free -m'                              # show sizes in MB                              	      #
-#alias np='nano -w PKGBUILD'                       # nano with PKGBUILD                            	      #      
-#alias more=less                                   # 'more' == 'less' pager                        	      #
+#alias i='sudo pacman -S '                       # Install a package with Pacman                	      #
+#alias cp="cp -i"                                # confirm before overwriting something          	      #
+#alias df='df -h'                                # human-readable sizes                          	      #
+#alias free='free -g'				 # free size in GB					      #
+#alias free='free -m'                            # show sizes in MB                              	      #
+#alias np='nano -w PKGBUILD'                     # nano with PKGBUILD                            	      #      
+#alias more=less                                 # 'more' == 'less' pager                        	      #
 ###############################################################################################################
 
 ###############################################################################################################
 # Arch Linux: Alias' Ad-Ons     									      #
 ###############################################################################################################
-#alias p='sudo pacman -Syyu'                       # Update/Upgrade Pacman & Sync	                      #
-#alias i='sudo pacman -S '                         # Install a package with Pacman                	      #
-#alias mk='makepkg --noconfirm -Ssci '		   # Build packages from source without a bother  	      #
+#alias p='sudo pacman -Syyu'                      # Update/Upgrade Pacman & Sync	                      #
+#alias i='sudo pacman -S '                        # Install a package with Pacman                	      #
+#alias mk='makepkg --noconfirm -Ssci '		  # Build packages from source without a bother  	      #
 ###############################################################################################################
 
 ###############################################################################################################
-# Bourne Again Shell (B.A.S.H.): Essentials        #           (For Any Nix Box w/BASH)            	      #
+# Bourne Again Shell (B.A.S.H.): Essentials       #           (For Any Nix Box w/BASH)            	      #
 ###############################################################################################################
-alias l='ls -hla'                                  # List all files:					      #
-				                   # (incl hidden)					      #
-		                                   #  &							      #
-		                                   # human-readable size				      #
-                                                   # formatting						      #
-alias tx='tmux new -s Multiplex-1'		   # start a new tmux session named 'Multiplexed'	      #
-alias tx='tmux new -s Multiplex-2'	 	   # start a new tmux session named 'Multiplexed'	      #
-alias tx='tmux new -s Multiplex-3'		   # start a new tmux session named 'Multiplexed'	      #
-alias sun='su ninjitsu'				   # switch to ninjitsu					      #
-alias susu='sudo su'				   # switch to root					      #
+alias l='ls -hla'                                 # List all files:					      #
+				                  # (incl hidden)					      #
+		                                  #  &							      #
+		                                  # human-readable size				      	      #
+                                                  # formatting						      #
+alias tx='tmux new -s Multiplex-1'		  # start a new tmux session named 'Multiplexed'	      #
+alias tx='tmux new -s Multiplex-2'	 	  # start a new tmux session named 'Multiplexed'	      #
+alias tx='tmux new -s Multiplex-3'		  # start a new tmux session named 'Multiplexed'	      #
+alias sun='su ninjitsu'				  # switch to ninjitsu					      #
+alias susu='sudo su'				  # switch to root					      #
 alias mntexthdd='ntfs-3g -o rw /dev/sdd /home/ninjitsu/media/3TB'					      #
-alias ntfs3g='sudo ntfs-3g -o rw '		   # Types half of the command for you for ntfs-3g mounts     #
-						   # Just specify block device then mount point.	      #
+alias ntfs3g='sudo ntfs-3g -o rw '		  # Types half of the command for you for ntfs-3g mounts      #
+						  # Just specify block device then mount point.	              #
 ###############################################################################################################
 
 ###############################################################################################################
-# .bashrc: Special Addition(s)			   #	   For your bashrc pleasure  			      #
+# .bashrc: Special Addition(s)			  #	   For your bashrc pleasure  			      #
 ###############################################################################################################
-alias e='sudo gedit /home/ninjitsu/.bashrc'        #	< << Quick & Dirty Edit for>> > 		      #
-#						   #	          (THIS) 				      #
-#						   # 		 '.bashrc'			 	      #
-#						   #		   File					      #
+alias e='sudo gedit /home/ninjitsu/.bashrc'       #	< << Quick & Dirty Edit for>> > 		      #
+#						  #	          (THIS) 				      #
+#						  # 		 '.bashrc'			 	      #
+#						  #		   File					      #
 ###############################################################################################################
 
 ###############################################################################################################
-# Custom Essentials: Aliases for most Linux(es)	   #     		(For Any Nix Box) 	              #
+# Custom Essentials: Aliases for most Linux(es)	  #     		(For Any Nix Box) 	              #
 ###############################################################################################################
 #(0)#													      #
 #													      #
