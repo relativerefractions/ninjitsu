@@ -1,119 +1,5 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
-
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
-
-# don't put duplicate lines or lines starting with space in the history.
-# See bash(1) for more options
-HISTCONTROL=ignoreboth
-
-# append to the history file, don't overwrite it
-shopt -s histappend
-
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=1000
-HISTFILESIZE=2000
-
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
-# If set, the pattern "**" used in a pathname expansion context will
-# match all files and zero or more directories and subdirectories.
-#shopt -s globstar
-
-# make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
-esac
-
-# uncomment for a colored prompt, if the terminal has the capability; turned
-# off by default to not distract the user: the focus in a terminal window
-# should be on the output of commands, not on the prompt
-#force_color_prompt=yes
-
-if [ -n "$force_color_prompt" ]; then
-    if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
-    else
-	color_prompt=
-    fi
-fi
-
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\Ninjitsu-Kali-WSL\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
-fi
-
-# colored GCC warnings and errors
-#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
-
 ###############################################################################################################
-# Debian-Based Linux: Default Aliases               # Targeted at Debian-Based Linux OS'es           	      #
+# Debian-Based Linux: Default Aliases              # Targeted at Debian-Based Linux OS'es           	      #
 ###############################################################################################################
 #alias ll='ls -lh'				   # long-listing of files with human-readable sizes	      #
 #alias la='ls -lha'				   # long-listing of files with human-readable sizes incl     #
@@ -138,18 +24,18 @@ fi
 #alias install='sudo apt install -y '		   # Install without the fuss of typing.		      #
 #alias search='apt-cache search '		   # Easily search Apt for packages			      #
 #alias lsn='sudo synaptic'			   # Launch synaptic quickly				      #
-#alias ninjpwn='sudo chown -Rv ninjitsu:ninjitsu '  # chown recursinvely as ninjitsu:ninjitsu 		      #
-#alias supwn='sudo chown -Rv root:root '	  	   # chown recursinvely as root:root	 		      #
+#alias ninjpwn='sudo chown -Rv ninjitsu:ninjitsu ' # chown recursinvely as ninjitsu:ninjitsu 		      #
+#alias supwn='sudo chown -Rv root:root '	   # chown recursinvely as root:root	 		      #
 #alias chmx='sudo chmod -v +x '			   # chmod						      #
 # Quicklhy remove the lock files from dpkg and apt # 							      #
-#alias aptul='sudo rm -fv /var/cache/apt/archives/lock* /var/cache/apt/archives/lock* /var/lib/dpkg/lock*'     #
+#alias aptul='sudo rm -fv /var/cache/apt/archives/lock* /var/cache/apt/archives/lock* /var/lib/dpkg/lock*'    #
 # Quicklhy remove the lock files from dpkg and apt # 							      #
-#alias dpkgul='sudo rm -fv /var/cache/apt/archives/lock* /var/cache/apt/archives/lock* /var/lib/dpkg/lock*'    #
+#alias dpkgul='sudo rm -fv /var/cache/apt/archives/lock* /var/cache/apt/archives/lock* /var/lib/dpkg/lock*'   #
 # Quicklhy remove the lock files from dpkg and apt # 							      #
-#alias fixapt='sudo apt -fy install; sudo dpkg --configure -a; sudo apt autoremove -y; sudo apt clean -y'      #
+#alias fixapt='sudo apt -fy install; sudo dpkg --configure -a; sudo apt autoremove -y; sudo apt clean -y'     #
 # Quicklhy remove the lock files from dpkg and apt # 							      #
-#alias fixdpkg='sudo apt -fy install; sudo dpkg --configure -a; sudo apt autoremove -y; sudo apt clean -y'     #
-#						   # Repair apt and dpkg in one foul swoop.        	      #
+#alias fixdpkg='sudo apt -fy install; sudo dpkg --configure -a; sudo apt autoremove -y; sudo apt clean -y'    #
+# Repair apt and dpkg in one foul swoop.           #							      #
 #alias debfix='sudo rm -fv /var/lib/dpkg/lock*;
 #	      sudo dpkg --configure -a; 
 #	      sudo apt -fy install;
@@ -158,7 +44,7 @@ fi
 #	      sudo apt autoremove -y;
 #	      sudo apt clean -y;
 #	      sudo grub-mkconfig'		   #				  			      #
-#						   # Repair Bluetooth					      #
+#Repair Bluetooth				   # 							      #
 #alias btrefresh='sudo systemctl stop bluetooth;
 #                 sudo systemctl start bluetooth;
 #                 sudo systemctl status bluetooth;
@@ -167,7 +53,7 @@ fi
 ###############################################################################################################
 
 ###############################################################################################################
-# <-=[- BlackArch Linux - WSL2 -]=->		  # Default Aliases                      		      #
+# <-=[- BlackArch Linux - WSL1 -]=->		  # Default Aliases                      		      #
 ###############################################################################################################
 alias cp="cp -i"                                  # confirm before overwriting something          	      #
 alias df='df -h'                                  # human-readable sizes                          	      #
@@ -178,7 +64,7 @@ alias more=less                                   # 'more' == 'less' pager      
 ###############################################################################################################
 
 ###############################################################################################################
-# <-=[- BlackArch Linux - WSL2 -]=->              # Alias' Ad-Ons					      #
+# <-=[- BlackArch Linux - WSL1 -]=->              # Alias' Ad-Ons					      #
 ###############################################################################################################
 # Update/Upgrade Pacman & Sync
 alias P='sudo pacman -Syyu'
@@ -262,19 +148,19 @@ alias atta='tmux attach -t multiplexa'		   # Attach to Multiplex 1 session			   
 alias attb='tmux attach -t multiplexb'		   # Attach to Multiplex 1 session			      #
 alias attc='tmux attach -t multiplexc'		   # Attach to Multiplex 1 session			      #
 alias lstmux='tmux ls'				   # List existing tmux sessions			      #
-alias sun='su ninjitsu'			   # switch to ninjitsu				      #
+alias sun='su ninjitsu'			  	   # switch to ninjitsu				     	      #
 alias susu='sudo su'				   # switch to root					      #
 ###############################################################################################################
 
 ###############################################################################################################
 # .bashrc: Special Addition(s)			   #	   For your bashrc pleasure  			      #
 ###############################################################################################################
-alias e='sudo nano /home/ninjitsu/.bashrc'         #	< << Quick & Dirty Edit for>> > 		      #
-#						   #	          (THIS) 				      #
-#						   # 		 '.bashrc'			 	      #
-#						   #     	   File				      #
+alias e='sudo nano /home/ninjitsu/.bashrc'         #		< << Quick & Dirty Edit for>> > 	      #
+#						   #	        	 (THIS) 			      #
+#						   # 	     	    '.bash_aliases'			      #
+#						   #     	   	  File				      #
 #						   #							      #
-alias eg='sudo gedit /home/ninjitsu/.bashrc'       #    < << GTK-Edit This File!!! >> >                       #
+alias eg='sudo gedit /home/ninjitsu/.bashrc'       #            < << GTK-Edit This File!!! >> >               #
 ###############################################################################################################
 
 ###############################################################################################################
@@ -356,14 +242,14 @@ alias c='rsync --info=progress2 -avz '          # copy src to dir w/progress bar
 alias r='rm -rvf '                              # remove dir or file(s) recursive/verbose(ly)   	      #
 alias mdir='mkdir -vp '                         # mkdir w/parents verbosely                     	      #
 alias t='touch '                                # touch a file without typing touch             	      #
-alias sc='sudo rsync --info=progress2 -avz '    # copy src to dir w/progress bar verbosely     	      #
+alias sc='sudo rsync --info=progress2 -avz '    # copy src to dir w/progress bar verbosely     	              #
 alias mpar='mkdir -vp '                         # mkdir w/parents verbosely                     	      #
 alias t='touch '                                # touch a file without typing touch             	      #
 alias cdsu='cd /etc/sudoers.d/;
-sudo ls -l'			                # enter the sudoers.d directory			      #
+sudo ls -l'			                # enter the sudoers.d directory			              #
 alias restart='sudo reboot'                     # reboot or restart, doesn't matter			      #
 # 						# search aliases with grep				      #
-alias searchalias='grep -rnIi --color '	#							      #
+alias searchalias='grep -rnIi --color '	#							              #
 alias sucaja='gksudo caja'			# run caja file explorer as root			      #
 alias cajasu='gksudo caja'			# run caja file explorer as root			      #
 ###############################################################################################################
