@@ -113,7 +113,7 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################################################################
-# Debian-Based Linux: Default Aliases               # Targeted at Debian-Based Linux OS'es           	      #
+# Debian-Based Linux: Default Aliases              # Targeted at Debian-Based Linux OS'es           	      #
 ###############################################################################################################
 alias ll='ls -lh'				   # long-listing of files with human-readable sizes	      #
 alias la='ls -lha'				   # long-listing of files with human-readable sizes incl     #
