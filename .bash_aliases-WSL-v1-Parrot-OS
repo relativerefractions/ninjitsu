@@ -25,7 +25,7 @@ alias _i='sudo -i'
 
 
 ###############################################################################################################
-# Parrot OS Linux: Ad-On Aliases                                     				                          #
+# Parrot OS Linux: Ad-On Aliases                                     				              #
 ###############################################################################################################
 # Update/Upgrade/Autoclean/Clean the System
 alias uu='sudo apt update;										
@@ -92,7 +92,7 @@ alias dpi='sudo dpkg -i '
 ###############################################################################################################
 
 ###############################################################################################################
-# Arch Linux: Default Aliases - Targeted at Arch Linux Based OS'es                                 	          #
+# Arch Linux: Default Aliases - Targeted at Arch Linux Based OS'es                                 	      #
 ###############################################################################################################                                                                                         
 # Install a package with Pacman
 #alias i='sudo pacman -S '
@@ -157,7 +157,7 @@ alias susu='sudo su'
 ###############################################################################################################
 
 ###############################################################################################################
-# .bashrc: Special Addition(s) - For your bashrc pleasure                                     			      #
+# .bashrc: Special Addition(s) - For your bashrc pleasure                                     		      #
 ###############################################################################################################
 #	< << Quick & Dirty Edit for >> >
 #	            (THIS)
@@ -285,7 +285,7 @@ alias cajasu='gksudo caja'
 ###############################################################################################################
 
 ###############################################################################################################
-# Software Aliases:	- Adding Cushion to your Fingers			                                              #
+# Software Aliases:	- Adding Cushion to your Fingers			                              #
 ###############################################################################################################
 # Downloads & extracts audio from YouTube and converts it into mp3 format via youtube-dl
 alias y='cd /home/ninjitsu/Music; youtube-dl -x --audio-format=mp3 '
@@ -331,13 +331,13 @@ alias POL='firejail --noprofile optirun /opt/POL-POM-4/playonlinux'
 
 ###############################################################################################################
 # Special Thanks: To all you Linux users, developers, & hackers,                                              #
-# without which, Linux, in all its complexity and awe would not be possible,				                  #
-# be free, inspire others, or even exist at all.					        	                              #
+# without which, Linux, in all its complexity and awe would not be possible,				      #
+# be free, inspire others, or even exist at all.					        	      #                       #
 ###############################################################################################################
-#   By: Ninjitsu          |_______|_____________________________|_______________________________|	          #
-#    - a.k.a.- 		                    |			  |				            |                             #
+#   By: Ninjitsu          |_______|_____________________________|_______________________________|___________  #
+#    - a.k.a.- 		                    |			  |				            | #                            #
 # Joel MatthewGrant       |===================================================================================#
-# Email: refract@pm.me	  |	                |				|				|	                              #
+# Email: refract@pm.me	  |	                |				|			      #	                              #
 ###############################################################################################################
 
 ###############################################################################################################
